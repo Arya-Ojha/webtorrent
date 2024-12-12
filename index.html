@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bithub - WebTorrent Client</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bithub</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>WebTorrent Client</h2>
+            <p>Drag and drop your torrent files or copy magnet links to start downloading.</p>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Drag and drop torrent files</li>
+                <li>Copy magnet links</li>
+                <li>Fast and secure downloads</li>
+                <li>Support for streaming videos while downloading</li>
+                <li>User-friendly interface</li>
+            </ul>
+        </section>
+
+        <section id="usage">
+            <h2>Usage</h2>
+            <div id="drop-area">
+                <p>Drop your torrent file here or <strong>click to select a file</strong></p>
+                <input type="file" id="fileElem" accept=".torrent" style="display:none;">
+                <label for="fileElem" id="file-label">Select a Torrent File</label>
+            </div>
+            <h3>Or Copy a Magnet Link:</h3>
+            <input type="text" id="magnet-link" placeholder="Paste your magnet link here">
+            <button id="start-download">Download</button>
+        </section>
+
+        <section id="support">
+            <h2>Support</h2>
+            <p>If you have any questions or need assistance, please visit our support page.</p>
+            <a href="support-link" class="btn">Visit Support</a>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Bithub is a powerful WebTorrent client designed for high-speed downloads and streaming.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Bithub. All rights reserved.</p>
+        <ul>
+            <li><a href="privacy-policy-link">Privacy Policy</a></li>
+            <li><a href="terms-of-service-link">Terms of Service</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to JavaScript file -->
+    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
+</body>
+
+</html>
