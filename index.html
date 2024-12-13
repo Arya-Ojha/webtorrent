@@ -7,6 +7,7 @@
     <title>Bithub - WebTorrent Client</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./script.js">
+    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
 </head>
 
 <body>
@@ -49,6 +50,10 @@
             <h3>Or Copy a Magnet Link:</h3>
             <input type="text" id="magnet-link" placeholder="Paste your magnet link here">
             <button id="start-download">Download</button>
+
+            <div id="progress-container" style="display: none;">
+                <div id="progress-bar"></div>
+            </div>
         </section>
 
         <section id="support">
