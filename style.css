@@ -121,6 +121,18 @@ main {
 #usage {
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.07);
+    z-index: 5;
+    position: relative;
+    z-index: 2;
+}
+
+.box {
+    background-color: black;
+    height: 100px;
+    width: 350px;
+    position:absolute;
+    top: 90%;
+    left: 80%;
 }
 
 section {
@@ -144,6 +156,8 @@ h2 {
     background-color: #e0e0e0;
     border-radius: 20px;
     margin-top: 20px;
+    border-color: #e0e0e0;
+    border-width: 5px;
 }
 
 #progress-bar {
@@ -152,6 +166,7 @@ h2 {
     background-color: #565c57;
     border-radius: 20px;
     transition: width 0.2s; 
+    border-color: #e0e0e0;
 }
 
 footer {
