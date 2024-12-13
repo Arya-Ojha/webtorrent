@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bithub - WebTorrent Client</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./script.js">
+    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
 </head>
 
 <body>
@@ -22,6 +24,12 @@
     </header>
 
     <main>
+            <div class="spline-background">
+<spline-viewer loading-anim-type="spinner-small-dark"
+    url="https://prod.spline.design/eXPYEjjuKklm22Fl/scene.splinecode"><img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAATCAYAAADxlA/3AAAJ+ElEQVR4AQCBAH7/AHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjA92aYwrdmmMRHZpjFd2aYxhdmmMYXZpjFh2aYxFdmmMK3ZpjA52aYwAdmmMAHZpjAB2aYwAAIEAfv8AdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwBdmmMHXZpjDl2aYxSdmmMZHZpjG92aYxvdmmMZnZpjFN2aYw6dmmMHHZpjAB2aYwAdmmMAHZpjAAAgQB+/wB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAJ2aYwBdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjBd2aYwzdmmMUHZpjGl2aYx8dmmMh3ZpjId2aYx+dmmMbHZpjFJ2aYw1dmmMF3ZpjAB2aYwAdmmMAACBAH7/AHZpjAF2aYwDdmmMB3ZpjAx2aYwQdmmMEnZpjBJ2aYwPdmmMCHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAF2aYwWdmmMMHZpjEx2aYxpdmmMg3ZpjJZ2aYyhdmmMo3ZpjJp2aYyIdmmMb3ZpjFJ2aYw0dmmMGnZpjAZ2aYwAAIEAfv8AdmmMCXZpjAx2aYwQdmmMFXZpjBp2aYwddmmMHnZpjBt2aYwWdmmMDnZpjAZ2aYwAdmmMAHZpjAB2aYwFdmmMFHZpjCp2aYxEdmmMYXZpjH92aYyZdmmMrXZpjLl2aYy7dmmMsnZpjKF2aYyIdmmMa3ZpjE52aYw0dmmMIXZpjBYAgQB+/wB2aYwIdmmMC3ZpjBB2aYwVdmmMG3ZpjB92aYwgdmmMHnZpjBp2aYwTdmmMDHZpjAZ2aYwEdmmMBnZpjA92aYwfdmmMNXZpjFB2aYxudmmMjHZpjKd2aYy8dmmMyHZpjMt2aYzDdmmMsnZpjJp2aYx+dmmMYXZpjEd2aYw0dmmMKgCBAH7/AHZpjAB2aYwCdmmMB3ZpjA12aYwTdmmMGHZpjBp2aYwZdmmMFnZpjBB2aYwKdmmMBXZpjAN2aYwHdmmMEHZpjCF2aYw4dmmMVHZpjHN2aYySdmmMrXZpjMN2aYzQdmmM03ZpjMx2aYy7dmmMpHZpjIh2aYxsdmmMUnZpjD92aYw1AIEAfv8AdmmMAHZpjAB2aYwAdmmMAHZpjAd2aYwMdmmMD3ZpjA92aYwNdmmMCHZpjAN2aYwAdmmMAHZpjAJ2aYwMdmmMHnZpjDV2aYxSdmmMcXZpjJF2aYytdmmMw3ZpjNF2aYzVdmmMz3ZpjL92aYyodmmMjXZpjHF2aYxYdmmMRXZpjDsAgQB+/wB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAJ2aYwGdmmMB3ZpjAV2aYwBdmmMAHZpjAB2aYwAdmmMAHZpjAh2aYwadmmMMnZpjE92aYxvdmmMj3ZpjKx2aYzDdmmM0XZpjNZ2aYzQdmmMwXZpjKt2aYyQdmmMdHZpjFx2aYxKdmmMQACBAH7/AHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAN2aYwEdmmMA3ZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMB3ZpjBl2aYwydmmMT3ZpjHB2aYyQdmmMrXZpjMV2aYzUdmmM2XZpjNN2aYzFdmmMr3ZpjJV2aYx6dmmMYnZpjFB2aYxGAIEAfv8AdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwEdmmMCHZpjAl2aYwIdmmMBHZpjAB2aYwAdmmMAHZpjAF2aYwMdmmMHnZpjDZ2aYxUdmmMdHZpjJV2aYyydmmMynZpjNl2aYzedmmM2XZpjMt2aYy2dmmMnHZpjIJ2aYxqdmmMWHZpjE4AgQB+/wB2aYwAdmmMAHZpjAB2aYwCdmmMCXZpjA92aYwTdmmMFHZpjBJ2aYwOdmmMCXZpjAZ2aYwFdmmMCXZpjBR2aYwldmmMPXZpjFp2aYx6dmmMmnZpjLh2aYzPdmmM3nZpjOR2aYzfdmmM0nZpjL12aYyjdmmMiXZpjHF2aYxgdmmMVgCBAH7/AHZpjAB2aYwCdmmMCHZpjA92aYwWdmmMHHZpjB92aYwgdmmMHXZpjBh2aYwTdmmMDnZpjAx2aYwQdmmMGXZpjCp2aYxBdmmMXXZpjH12aYycdmmMuXZpjNF2aYzgdmmM5XZpjOF2aYzTdmmMvnZpjKV2aYyLdmmMdHZpjGJ2aYxYAIEAfv8AdmmMCHZpjAt2aYwRdmmMGHZpjB52aYwjdmmMJnZpjCZ2aYwidmmMHXZpjBZ2aYwQdmmMDXZpjBB2aYwYdmmMJ3ZpjD12aYxYdmmMd3ZpjJZ2aYyydmmMyXZpjNh2aYzddmmM2HZpjMt2aYy2dmmMnXZpjIN2aYxsdmmMWnZpjFEAgQB+/wB2aYwJdmmMDHZpjBF2aYwYdmmMHnZpjCJ2aYwkdmmMI3ZpjB52aYwXdmmMD3ZpjAh2aYwEdmmMBXZpjAx2aYwadmmML3ZpjEl2aYxmdmmMhHZpjKB2aYy2dmmMxHZpjMl2aYzEdmmMtnZpjKF2aYyIdmmMbnZpjFd2aYxGdmmMPACBAH7/AHZpjAF2aYwEdmmMCHZpjA52aYwUdmmMGHZpjBl2aYwWdmmMEXZpjAl2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAN2aYwXdmmMMHZpjEx2aYxpdmmMhHZpjJl2aYyndmmMq3ZpjKZ2aYyYdmmMg3ZpjGp2aYxPdmmMOHZpjCd2aYwdAIEAfv8AdmmMAHZpjAB2aYwAdmmMAHZpjAR2aYwHdmmMB3ZpjAR2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwSdmmMLXZpjEl2aYxjdmmMeHZpjIV2aYyJdmmMg3ZpjHV2aYxgdmmMRnZpjCx2aYwVdmmMA3ZpjAAAgQB+/wB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwSdmmMLXZpjEd2aYxbdmmMZ3ZpjGt2aYxldmmMV3ZpjEF2aYwodmmMDnZpjAB2aYwAdmmMAAGBAH7/AHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAB2aYwAdmmMAHZpjAJ2aYwddmmMNnZpjEp2aYxWdmmMWnZpjFR2aYxFdmmMMHZpjBZ2aYwAdmmMAHZpjAB2aYwA1ODnYMozbR4AAAAASUVORK5CYII="
+        alt="Spline preview" style="width: 100%; height: 100%;" /></spline-viewer>            </div>
+        <div class="box"></div>
         <section id="hero">
             <h2>WebTorrent Client</h2>
             <p>Drag and drop your torrent files or copy magnet links to start downloading.</p>
@@ -32,14 +40,14 @@
             <ul>
                 <li>Drag and drop torrent files</li>
                 <li>Copy magnet links</li>
-                <li>Fast and secure downloads</li>
-                <li>Support for streaming videos while downloading</li>
+                <!-- <li>Fast and secure downloads</li> -->
+                <!-- <li>Support for streaming videos while downloading</li> -->
                 <li>User-friendly interface</li>
             </ul>
         </section>
 
         <section id="usage">
-            <h2>Usage</h2>
+            <!-- <h2>Usage</h2> -->
             <div id="drop-area">
                 <p>Drop your torrent file here or <strong>click to select a file</strong></p>
                 <input type="file" id="fileElem" accept=".torrent" style="display:none;">
@@ -48,18 +56,17 @@
             <h3>Or Copy a Magnet Link:</h3>
             <input type="text" id="magnet-link" placeholder="Paste your magnet link here">
             <button id="start-download">Download</button>
+
+            <div id="progress-container" style="display: none;">
+                <div id="progress-bar"></div>
+            </div>
         </section>
 
-        <section id="support">
-            <h2>Support</h2>
-            <p>If you have any questions or need assistance, please visit our support page.</p>
-            <a href="support-link" class="btn">Visit Support</a>
-        </section>
 
-        <section id="about">
+        <!-- <section id="about">
             <h2>About Us</h2>
             <p>Bithub is a powerful WebTorrent client designed for high-speed downloads and streaming.</p>
-        </section>
+        </section> -->
     </main>
 
     <footer>
@@ -70,8 +77,10 @@
         </ul>
     </footer>
 
-    <script src="script.js"></script> <!-- Link to JavaScript file -->
-    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js" async></script>
 </body>
 
 </html>
+
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js" async></script>

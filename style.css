@@ -2,17 +2,27 @@
 body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.spline-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
 }
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #495057;
+    background-color: rgb(0, 0, 0);
     color: #e9ecef;
 }
 
 header {
-    background: #343a40;
+    background: rgba(0, 0, 0, 0);
     color: #edede9;
     padding: 20px;
     text-align: center;
@@ -29,7 +39,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #edede9;
     text-decoration: none;
     text-shadow: black 0.5px 1.1px 2.1px;
 }
@@ -39,25 +49,33 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    padding: 0px;
+    max-width: 600px;
+    margin-left: 120px;
 }
 
 #hero {
-    background: #6c757d;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.07);
+    color: #edede9;
     padding: 30px;
     text-align: center;
     text-shadow: black 0.5px 1.1px 2.1px;
+    border-radius: 30px;
+}
+
+#features {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.07);
+    text-align:left;
+    padding-left: 33px;
 }
 
 #drop-area {
     border: 2px dashed #e3d5ca;
-    border-radius: 5px;
+    border-radius: 30px;
     padding: 20px;
     text-align: center;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 #drop-area.highlight {
@@ -67,9 +85,9 @@ main {
 .btn {
     display: inline-block;
     background: #dee2e6;
-    color: #fff;
+    color: #edede9;
     text-shadow: black 0.5px 1.1px 2.1px;
-    padding: 10px 20px;
+    padding: 0px 20px;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -78,24 +96,83 @@ main {
     background: #f8f9fa ;
 }
 
+#magnet-link {
+    /* padding-right:50px 50px; */
+    margin-right: 15px;
+    background-color: rgba(0, 0, 0, 0);;
+    color: #edede9;
+    border-color: #edede9;
+    border-radius: 20px;
+    height: 40px;
+    width: 440px;
+    text-align: center;
+}
+
+#start-download {
+    border-radius: 20px;
+    height: 40px;
+    width: 90px;
+    border-color: #edede9;
+    border-width: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #edede9;
+}
+
+#usage {
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.07);
+    z-index: 5;
+    position: relative;
+    z-index: 2;
+}
+
+.box {
+    background-color: black;
+    height: 100px;
+    width: 350px;
+    position:absolute;
+    top: 90%;
+    left: 80%;
+}
+
 section {
     margin: 20px 0;
     padding: 20px;
-    background: #6c757d;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-shadow: black 0.5px 1.1px 2.1px;
-    color: #fff;
+    color: #edede9;
+    text-align: center;
 }
 
 h2 {
     margin-bottom: 10px;
 }
+#progress-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    margin-top: 20px;
+    border-color: #e0e0e0;
+    border-width: 5px;
+}
+
+#progress-bar {
+    height: 20px;
+    width: 0%;
+    background-color: #565c57;
+    border-radius: 20px;
+    transition: width 0.2s; 
+    border-color: #e0e0e0;
+}
 
 footer {
     text-align: center;
-    padding: 20px;
-    background: #343a40;
+    padding: 0px;
+    background: rgba(255, 255, 255, 0);
     color: #edede9;
 
 }
@@ -116,4 +193,14 @@ footer ul li a {
 
 footer ul li a:hover {
     text-decoration: underline;
+}
+.highlight {
+    background-color: #edede9;
+}
+
+#spline-viewer {
+    width: 100%;
+    height: 100%;
+    /* z-index: 1; */
+
 }
