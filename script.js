@@ -68,18 +68,31 @@ document.addEventListener("DOMContentLoaded", () => {
     client.add(file, { path: "D:\webtorrent download" }, (torrent) => {
         console.log("Downloading:", torrent.infoHash);
         torrent.on("download", (bytes) => {
-        console.log("Downloaded:", bytes);
-        console.log("Total downloaded:", torrent.downloaded);
-        console.log("Download speed:", torrent.downloadSpeed);
+            console.log("Downloaded:", bytes);
+            console.log("Total downloaded:", torrent.downloaded);
+            console.log("Download speed:", torrent.downloadSpeed);
 
-        const progress = (torrent.downloaded / torrent.length) * 100;
-        progressBar.style.width = progress + "%";
+            const progress = (torrent.downloaded / torrent.length) * 100;
+            progressBar.style.width = progress + "%";
         });
 
         torrent.on("done", () => {
-        console.log("Download finished:", torrent.name);
-        alert(`Download finished: ${torrent.name}`);
-        progressBar.style.width = "100%";
+            console.log("Download finished:", torrent.name);
+            alert(`Download finished: ${torrent.name}`);
+            torrent.files.forEach((file) => {
+                file.getBlobURL((err, url) => {
+                    if (err) throw err;
+
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = file.name; 
+                    document.body.appendChild(a);
+                    a.click(); 
+                    document.body.removeChild(a); 
+                });
+            });
+
+            progressBar.style.width = "100%";
         });
     });
 }
@@ -103,6 +116,19 @@ document.addEventListener("DOMContentLoaded", () => {
             torrent.on('done', () => {
                 console.log('Download finished:', torrent.name);
                 alert(`Download finished: ${torrent.name}`);
+                torrent.files.forEach((file) => {
+                    file.getBlobURL((err, url) => {
+                        if (err) throw err;
+
+                        const a = document.createElement("a");
+                        a.href = url;
+                        a.download = file.name;
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                        });
+                    });
+
                 progressBar.style.width = '100%'; 
             });
         });
