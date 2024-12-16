@@ -65,21 +65,21 @@ document.addEventListener("DOMContentLoaded", () => {
     progressContainer.style.display = 'block'; 
     progressBar.style.width = '0%'; 
 
-    client.add(file, { path: file.name }, (torrent) => {
-        console.log('Downloading:', torrent.infoHash);
-        torrent.on('download', (bytes) => {
-            console.log('Downloaded:', bytes);
-            console.log('Total downloaded:', torrent.downloaded);
-            console.log('Download speed:', torrent.downloadSpeed);
-            
-            const progress = (torrent.downloaded / torrent.length) * 100;
-            progressBar.style.width = progress + '%'; 
+    client.add(file, { path: "D:\webtorrent download" }, (torrent) => {
+        console.log("Downloading:", torrent.infoHash);
+        torrent.on("download", (bytes) => {
+        console.log("Downloaded:", bytes);
+        console.log("Total downloaded:", torrent.downloaded);
+        console.log("Download speed:", torrent.downloadSpeed);
+
+        const progress = (torrent.downloaded / torrent.length) * 100;
+        progressBar.style.width = progress + "%";
         });
 
-        torrent.on('done', () => {
-            console.log('Download finished:', torrent.name);
-            alert(`Download finished: ${torrent.name}`);
-            progressBar.style.width = '100%'; 
+        torrent.on("done", () => {
+        console.log("Download finished:", torrent.name);
+        alert(`Download finished: ${torrent.name}`);
+        progressBar.style.width = "100%";
         });
     });
 }
