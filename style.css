@@ -19,6 +19,8 @@ body {
     line-height: 1.6;
     background-color: rgb(0, 0, 0);
     color: #e9ecef;
+    background-image: url("./images/background2.jpg");
+    background-size: cover;
 }
 
 header {
@@ -28,6 +30,14 @@ header {
     text-align: center;
     z-index: 6;
     position: relative;
+}
+
+.border {
+    height: 1.2px;
+    background-color: #edede967;
+    margin-top: 10px;
+    width: 90%;
+    justify-self: center;
 }
 
 .github {
@@ -40,9 +50,11 @@ nav ul {
     padding: 0;
 }
 
+
 nav ul li {
     display: inline;
     margin: 0 15px;
+    transition: 0.3s;
 }
 
 nav ul li a {
@@ -53,6 +65,7 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+
 }
 
 main {
