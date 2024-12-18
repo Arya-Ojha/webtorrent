@@ -10,6 +10,8 @@ body {
     line-height: 1.6;
     background-color: rgb(0, 0, 0);
     color: #e9ecef;
+    background-image: url("./images/background2.jpg");
+    background-size: cover;
 }
 
 header {
@@ -21,15 +23,17 @@ header {
     position: relative;
 }
 
+.border {
+    height: 1.2px;
+    background-color: #edede967;
+    margin-top: 10px;
+    width: 90%;
+    justify-self: center;
+}
+
 .github {
     height: 25px;
     width: 25px;
-}
-
-.github1 {
-    height: 20px;
-    width: 20px;
-    margin-left: 15px;
 }
 
 nav ul {
@@ -86,7 +90,7 @@ nav ul li a:hover {
     /* width: 500px; */
     /* gap: 50px; */
     grid-template-columns: repeat(2, 1fr);
-    gap: 200px;
+    gap: 450px;
 }
 
 .grid-item {
@@ -97,6 +101,7 @@ nav ul li a:hover {
     text-shadow: black 0.5px 1.1px 2.1px;
     border-radius: 30px;
     transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    
 }
 
 .grid-item:hover {
@@ -116,4 +121,20 @@ main {
     display: flex; 
     flex-direction: column; 
     justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.logo1 {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
