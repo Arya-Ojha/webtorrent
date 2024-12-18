@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bithub - WebTorrent Client</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Bithub <span><img class="github" src="./images/github-mark-white.svg" alt=""></span></h1>
+        <nav>
+            <ul>
+                <li><a href="./contributers.html">Contributers</a></li>
+                <li><a href="./tech-stack.html">Tech-stack</a></li>
+                <!-- <li><a href="#support">Support</a></li> -->
+                <!-- <li><a href="#about">About</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="spline-background">
+            <spline-viewer loading-anim-type="spinner-small-dark"
+                url="https://prod.spline.design/eXPYEjjuKklm22Fl/scene.splinecode"><img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAATCAYAAADxlA/3AAAJ+ElEQVR4AQCBAH7/AHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggx0aIIZdGiCJnRogi90aII0dGiCNHRogjB0aIImdGiCGXRoggt0aIIAdGiCAHRoggB0aIIAAIEAfv8AdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIFdGiCE3RogiF0aIItdGiCNnRogjx0aII8dGiCN3Rogi50aIIhdGiCEnRoggN0aIIAdGiCAHRoggAAgQB+/wB0aIIAdGiCAHRoggF0aIIDdGiCBXRoggZ0aIIGdGiCBHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCBHRoghF0aIIfdGiCLXRogjp0aIJDdGiCSHRogkl0aIJEdGiCO3Rogi50aIIgdGiCEXRoggR0aIIAdGiCAACBAH7/AHRoggd0aIIIdGiCCnRoggx0aIIOdGiCEHRoghB0aIIOdGiCC3RoggZ0aIICdGiCAHRoggB0aIIAdGiCAHRoggd0aIIRdGiCHnRogi10aII7dGiCSHRoglJ0aIJXdGiCWHRoglN0aIJKdGiCPnRogi90aIIgdGiCE3Roggp0aIIEAIEAfv8AdGiCDXRogg50aIIQdGiCEnRoghV0aIIWdGiCF3RoghV0aIITdGiCD3Roggt0aIIHdGiCBnRoggZ0aIIKdGiCEnRogh10aIIqdGiCOXRogkd0aIJUdGiCXnRogmR0aIJldGiCYXRoglh0aIJMdGiCPXRogi90aIIidGiCGHRoghMAgQB+/wB0aIIOdGiCD3RoghF0aIIUdGiCF3Roghl0aIIZdGiCGXRoghZ0aIITdGiCD3Rogg10aIILdGiCDHRoghF0aIIZdGiCJHRogjF0aIJBdGiCUHRogl10aIJndGiCbnRogm90aIJrdGiCYnRoglZ0aIJIdGiCOnRogi10aIIjdGiCHgCBAH7/AHRoggp0aIIMdGiCDnRoghF0aIIUdGiCF3Roghh0aIIXdGiCFXRoghN0aIIQdGiCDXRoggx0aIIOdGiCE3Roght0aIIndGiCNXRogkR0aIJTdGiCYXRogmx0aIJzdGiCdHRognF0aIJodGiCXXRogk90aIJAdGiCNHRogip0aIIlAIEAfv8AdGiCBXRoggZ0aIIJdGiCDHRogg90aIISdGiCE3RoghN0aIISdGiCEHRogg10aIILdGiCC3Rogg10aIISdGiCG3RogiZ0aII1dGiCRXRoglR0aIJidGiCbnRognR0aIJ2dGiCc3Rogmt0aIJgdGiCUnRogkR0aII4dGiCLnRogikAgQB+/wB0aIIAdGiCAXRoggR0aIIHdGiCC3Rogg50aIIQdGiCEHRogg90aIINdGiCC3Roggl0aIIJdGiCC3RoghF0aIIZdGiCJXRogjR0aIJEdGiCVHRogmN0aIJudGiCdXRognd0aIJ1dGiCbXRogmJ0aIJUdGiCR3Rogjt0aIIxdGiCLACBAH7/AHRoggB0aIIAdGiCAnRoggV0aIIJdGiCDHRogg50aIIPdGiCDnRoggx0aIIKdGiCCHRoggh0aIILdGiCEHRoghl0aIImdGiCNHRogkV0aIJVdGiCY3Rogm90aIJ3dGiCeXRognZ0aIJvdGiCZHRogld0aIJKdGiCPnRogjV0aIIwAIEAfv8AdGiCAHRoggF0aIIEdGiCCHRoggt0aIIPdGiCEXRoghF0aIIQdGiCD3Roggx0aIILdGiCC3Rogg10aIITdGiCHHRogih0aII2dGiCR3Rogld0aIJmdGiCcXRognl0aIJ8dGiCeXRognJ0aIJodGiCW3Rogk10aIJBdGiCOHRogjQAgQB+/wB0aIIFdGiCBnRoggl0aIINdGiCEHRoghN0aIIVdGiCFnRoghV0aIITdGiCEHRogg90aIIOdGiCEHRoghZ0aIIedGiCKnRogjl0aIJJdGiCWXRogmh0aIJzdGiCe3Rogn50aIJ8dGiCdXRogmp0aIJddGiCUHRogkV0aII8dGiCNwCBAH7/AHRoggp0aIIMdGiCD3RoghJ0aIIWdGiCGXRoghp0aIIadGiCGXRoghd0aIIUdGiCEnRoghF0aIITdGiCF3RogiB0aIIrdGiCOXRogkl0aIJZdGiCZ3RognN0aIJ7dGiCfXRognt0aIJ0dGiCanRogl10aIJQdGiCRXRogjx0aII3AIEAfv8AdGiCDnRogg90aIISdGiCFXRoghh0aIIbdGiCHHRoghx0aIIbdGiCGHRoghR0aIIRdGiCEHRoghF0aIIVdGiCHXRogih0aII2dGiCRXRoglR0aIJidGiCbnRognV0aIJ4dGiCdnRogm90aIJkdGiCWHRogkt0aII/dGiCNnRogjIAgQB+/wB0aIINdGiCDnRoghF0aIIUdGiCF3Roghl0aIIadGiCGXRoghd0aIIUdGiCEHRoggx0aIIKdGiCCnRogg50aIIVdGiCH3Rogix0aII7dGiCSnRoglh0aIJjdGiCanRogmx0aIJqdGiCY3Rogll0aIJMdGiCP3RogjN0aIIrdGiCJgCBAH7/AHRoggd0aIIIdGiCC3Rogg50aIIQdGiCEnRoghN0aIISdGiCD3Roggt0aIIGdGiCAnRoggB0aIIAdGiCAnRoggh0aIISdGiCHnRogix0aII7dGiCSHRoglN0aIJadGiCXHRogll0aIJSdGiCSHRogjt0aIIudGiCI3Roghp0aIIVAIEAfv8AdGiCAHRoggB0aIICdGiCBXRoggd0aIIJdGiCCXRoggd0aIIEdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggJ0aIIOdGiCHHRogip0aII3dGiCQXRogkh0aIJKdGiCR3RogkB0aII1dGiCKHRoght0aIIQdGiCB3RoggIAgQB+/wB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIINdGiCG3Rogih0aIIydGiCOHRogjp0aII3dGiCMHRogiV0aIIYdGiCC3RoggB0aIIAdGiCAAGBAH7/AHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggB0aIIAdGiCAHRoggV0aIISdGiCH3Rogil0aIIvdGiCMXRogi50aIImdGiCHHRogg90aIICdGiCAHRoggB0aIIA6k2UwgZfn8cAAAAASUVORK5CYII="
+                    alt="Spline preview" style="width: 100%; height: 100%;" /></spline-viewer>
+        </div>
+        <div class="box"></div>
+        <section id="hero">
+            <h2>WebTorrent Client</h2>
+            <p>Drag and drop your torrent files or copy magnet links to start downloading.</p>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Drag and drop torrent files</li>
+                <li>Copy magnet links</li>
+                <!-- <li>Fast and secure downloads</li> -->
+                <!-- <li>Support for streaming videos while downloading</li> -->
+                <li>User-friendly interface</li>
+                <li>No installation required</li>
+            </ul>
+        </section>
+
+        <section id="usage">
+            
+            <div id="drop-area">
+                <p>Drop your torrent file here or <strong>click to select a file</strong></p>
+                <input type="file" id="fileElem" accept=".torrent" style="display:none;">
+                <label for="fileElem" id="file-label">Select a Torrent File</label>
+            </div>
+            <h3>Or Copy a Magnet Link:</h3>
+            <input type="text" id="magnet-link" placeholder="Paste your magnet link here">
+            <button id="start-download">Download</button>
+
+            <div id="progress-container" style="display: none;">
+                <div id="progress-bar"></div>
+                
+            </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js" async></script>
+</body>
+
+</html>
+
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js" async></script>

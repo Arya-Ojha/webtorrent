@@ -26,6 +26,13 @@ header {
     color: #edede9;
     padding: 20px;
     text-align: center;
+    z-index: 6;
+    position: relative;
+}
+
+.github {
+    height: 25px;
+    width: 25px;
 }
 
 nav ul {
@@ -121,9 +128,9 @@ main {
 #usage {
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.07);
-    z-index: 5;
+    /* z-index: 5; */
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .box {
