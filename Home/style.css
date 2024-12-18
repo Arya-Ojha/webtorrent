@@ -30,6 +30,11 @@ header {
     position: relative;
 }
 
+.github {
+    height: 25px;
+    width: 25px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;

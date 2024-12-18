@@ -1,0 +1,119 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(0, 0, 0);
+    color: #e9ecef;
+}
+
+header {
+    background: rgba(0, 0, 0, 0);
+    color: #edede9;
+    padding: 20px;
+    text-align: center;
+    z-index: 6;
+    position: relative;
+}
+
+.github {
+    height: 25px;
+    width: 25px;
+}
+
+.github1 {
+    height: 20px;
+    width: 20px;
+    margin-left: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #edede9;
+    text-decoration: none;
+    text-shadow: black 0.5px 1.1px 2.1px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.spline-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: 0;    
+}
+
+#spline-viewer {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.box {
+    background-color: black;
+    height: 100px;
+    width: 350px;
+    position: absolute;
+    top: 93%;
+    left: 80%;
+}
+
+.hero {
+    display: grid;
+    /* grid-template-columns: auto auto; */
+    padding: 20px;
+    color: #edede9;
+    z-index: 1; 
+    height: 600px;
+    /* width: 500px; */
+    /* gap: 50px; */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 200px;
+}
+
+.grid-item {
+    background: rgba(255, 255, 255, 0.07);
+    color: #edede9;
+    padding: 30px;
+    text-align: center;
+    text-shadow: black 0.5px 1.1px 2.1px;
+    border-radius: 30px;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.name {
+    height: 70px;
+}
+
+main {
+    padding: 0;
+    margin: 0px 50px; 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+}

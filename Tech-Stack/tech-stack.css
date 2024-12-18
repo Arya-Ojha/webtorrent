@@ -21,6 +21,11 @@ header {
     position: relative;
 }
 
+.github {
+    height: 25px;
+    width: 25px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -47,13 +52,13 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%; 
-    z-index: -5;    
+    z-index: 0;    
 }
 
 #spline-viewer {
     width: 100%;
     height: 100%;
-    z-index: -5;
+    z-index: 0;
 }
 
 .box {
@@ -61,7 +66,7 @@ nav ul li a:hover {
     height: 100px;
     width: 350px;
     position: absolute;
-    top: 90%;
+    top: 93%;
     left: 80%;
 }
 
@@ -70,12 +75,12 @@ nav ul li a:hover {
     /* grid-template-columns: auto auto; */
     padding: 20px;
     color: #edede9;
-    z-index: 5; 
+    z-index: 1; 
     height: 600px;
     /* width: 500px; */
     /* gap: 50px; */
     grid-template-columns: repeat(2, 1fr);
-    gap: 350px;
+    gap: 450px;
 }
 
 .grid-item {
@@ -85,9 +90,18 @@ nav ul li a:hover {
     text-align: center;
     text-shadow: black 0.5px 1.1px 2.1px;
     border-radius: 30px;
-    height: 100%;
-    width: 87%;
-    /* height: inherit; */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    
+}
+
+.grid-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.name {
+    height: 70px;
 }
 
 main {
@@ -97,4 +111,20 @@ main {
     display: flex; 
     flex-direction: column; 
     justify-content: space-between;
+}
+
+.logo {
+    width: 230px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.logo1 {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
