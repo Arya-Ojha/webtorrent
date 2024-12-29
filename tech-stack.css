@@ -82,15 +82,12 @@ nav ul li a:hover {
 
 .hero {
     display: grid;
-    /* grid-template-columns: auto auto; */
     padding: 20px;
     color: #edede9;
     z-index: 1; 
-    height: 600px;
-    /* width: 500px; */
-    /* gap: 50px; */
+    height: auto; 
     grid-template-columns: repeat(2, 1fr);
-    gap: 450px;
+    gap: 450px; 
 }
 
 .grid-item {
@@ -101,7 +98,6 @@ nav ul li a:hover {
     text-shadow: black 0.5px 1.1px 2.1px;
     border-radius: 30px;
     transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-    
 }
 
 .grid-item:hover {
@@ -116,7 +112,7 @@ nav ul li a:hover {
 
 main {
     padding: 0;
-    margin: 0px 50px; 
+    margin: 0 50px; 
     height: 100vh; 
     display: flex; 
     flex-direction: column; 
@@ -137,4 +133,62 @@ main {
     margin: 0 auto;
     margin-bottom: 20px;
     margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+body {
+    overflow: scroll;
+}
+
+    .hero {
+        grid-template-columns: 1fr; 
+        gap: 20px; 
+    }
+
+    .box {
+        width: 100%; 
+        top: 90%;
+        left: 0; 
+    }
+
+    main {
+        margin: 0 20px; 
+    }
+
+    nav ul li {
+        display: block; 
+        margin: 10px 0; 
+    }
+
+    .logo, .logo1 {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+body {
+    overflow: scroll;
+}
+
+
+    header {
+        padding: 15px;
+    }
+
+    .grid-item {
+        padding: 20px; 
+    }
+
+    .box {
+        height: 80px; 
+    }
+
+    main {
+        margin: 0 10px;
+    }
+
+    .hero {
+        gap: 10px; 
+    }
 }
