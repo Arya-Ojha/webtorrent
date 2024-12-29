@@ -88,15 +88,12 @@ nav ul li a:hover {
 
 .hero {
     display: grid;
-    /* grid-template-columns: auto auto; */
     padding: 20px;
     color: #edede9;
     z-index: 1; 
-    height: 600px;
-    /* width: 500px; */
-    /* gap: 50px; */
+    height: auto;
     grid-template-columns: repeat(2, 1fr);
-    gap: 200px;
+    gap: 12rem;
 }
 
 .grid-item {
@@ -121,9 +118,59 @@ nav ul li a:hover {
 
 main {
     padding: 0;
-    margin: 0px 50px; 
+    margin: 0 50px; 
     height: 100vh; 
     display: flex; 
     flex-direction: column; 
     justify-content: space-between;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        overflow: scroll;
+    }
+
+    .hero {
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+    }
+
+    main {
+        margin: 0 20px; 
+    }
+
+    .box {
+        width: 100%; 
+        top: 90%;
+        left: 0; 
+    }
+
+    nav ul li {
+        display: block; 
+        margin: 10px 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+    overflow: scroll;
+    }
+
+
+    header {
+        padding: 15px;
+    }
+
+    .grid-item {
+        padding: 20px; 
+    }
+
+    .box {
+        height: 80px;
+    }
+
+    main {
+        margin: 0 10px; 
+    }
 }
