@@ -28,6 +28,7 @@ The website features a user-friendly interface that simplifies the process of ac
 ![App Screenshot](https://i.imgur.com/umGDEEx.png)
 ![App Screenshot](https://i.imgur.com/rOEjRyM.png)
 
+
 ## Lessons Learned
 
 - Understanding Web Technologies: I gained a deeper understanding of web technologies, particularly how WebTorrent operates and how it can be integrated into web applications. This knowledge has expanded my comprehension of real-time web communication and peer-to-peer networks.
