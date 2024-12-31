@@ -24,9 +24,10 @@ The website features a user-friendly interface that simplifies the process of ac
 - No Configuration Required: Traditional torrent clients often require configuration of settings like port forwarding and firewall adjustments. WebTorrent simplifies this process, allowing users to get started quickly and easily.
 ## Screenshots
 
-![App Screenshot](https://imgur.com/DrmsXW9)
-![App Screenshot](https://imgur.com/umGDEEx)
-![App Screenshot](https://imgur.com/rOEjRyM)
+![App Screenshot](https://i.imgur.com/DrmsXW9.png)
+![App Screenshot](https://i.imgur.com/umGDEEx.png)
+![App Screenshot](https://i.imgur.com/rOEjRyM.png)
+
 
 ## Lessons Learned
 
