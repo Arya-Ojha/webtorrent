@@ -133,23 +133,50 @@ main {
 
     .hero {
         grid-template-columns: 1fr; 
-        gap: 10px; 
+        gap: 25px; 
     }
 
     main {
         margin: 0 20px; 
     }
 
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
     .box {
+        position: fixed;
+        top: 100;      
+        left: 0;     
         width: 100%; 
-        top: 90%;
-        left: 0; 
+        z-index: 100;
+        margin-top: 17px;
+    }
+
+    .grid-item {
+        background: rgba(255, 255, 255, 0.11);
     }
 
     nav ul li {
         display: block; 
         margin: 10px 0; 
+        width: 100%
     }
+
+    header {
+    position: fixed;
+    top: 0;      
+    left: 0;     
+    width: 90%; 
+    z-index: 100; 
+    background-color: black;
+}
+.hero {
+    margin-top: 140px;
+}
 }
 
 @media (max-width: 480px) {
