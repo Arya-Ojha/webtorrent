@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const startDownloadButton = document.getElementById("start-download");
     const progressContainer = document.getElementById("progress-container");
     const progressBar = document.getElementById("progress-bar");
+    const video = document.getElementById("video");
     const client = new WebTorrent();
 
     ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
@@ -79,7 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
         torrent.on("done", () => {
             console.log("Download finished:", torrent.name);
             alert(`Download finished: ${torrent.name}`);
+            playVideo(torrent);
             torrent.files.forEach((file) => {
+                if (file.name.endsWith(".mp4")) {				
+                    file.renderTo(video); 
+                }
                 file.getBlobURL((err, url) => {
                     if (err) throw err;
 
@@ -116,7 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
             torrent.on('done', () => {
                 console.log('Download finished:', torrent.name);
                 alert(`Download finished: ${torrent.name}`);
+                playVideo(torrent);
                 torrent.files.forEach((file) => {
+                    if (file.name.endsWith(".mp4")) {
+                        file.renderTo(video);
+					}
                     file.getBlobURL((err, url) => {
                         if (err) throw err;
 
@@ -132,6 +141,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 progressBar.style.width = '100%'; 
             });
         });
+    }
+
+    function playVideo(torrent) {
+        video.style.display = 'block';
+        video.src = "";
+
+		
+		const videoFile = torrent.files.find((file) =>
+			file.name.endsWith(".mp4")
+		);
+
+		if (videoFile) {
+			
+			videoFile.getBlobURL((err, url) => {
+				if (err) {
+					console.error("Error getting Blob URL:", err);
+					return;
+				}
+
+				
+				video.src = url;
+
+				
+				video.play().catch((error) => {
+					console.error("Error playing video:", error);
+				});
+			});
+		} else {
+			console.error("No video file found in the torrent.");
+		}
     }
 });
 
